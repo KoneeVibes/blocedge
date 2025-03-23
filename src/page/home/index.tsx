@@ -5,6 +5,9 @@ import { Hero } from "../../container/hero";
 import { Counter } from "../../container/counter";
 import { About } from "../../container/about";
 import { WhyUs } from "../../container/whyus";
+import { Services } from "../../container/services";
+import { Team } from "../../container/team";
+import { Footer } from "../../component/footer";
 
 export const Home = () => {
     return (
@@ -25,6 +28,9 @@ export const Home = () => {
             <Counter />
             <About />
             <WhyUs />
+            <Services />
+            <Team />
+            <Footer />
         </HomeWrapper>
     )
 }

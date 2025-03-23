@@ -1,5 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { HeroWrapper } from "./styled";
+import { container, item } from "../../config/verticalSlideIn";
+import { motion } from "motion/react";
 
 export const Hero = () => {
     return (
@@ -10,9 +12,14 @@ export const Hero = () => {
                 alignItems={"center"}
                 justifyContent={"center"}
                 className="hero-chip"
+                component={motion.div}
+                variants={container}
+                initial="hidden"
+                whileInView="show"
             >
                 <Box
-                    component={"div"}
+                    component={motion.div}
+                    variants={item}
                     className="left-inner-chip"
                 >
                     <Typography
@@ -27,6 +34,8 @@ export const Hero = () => {
                     </Typography>
                 </Box>
                 <Box
+                    component={motion.div}
+                    variants={item}
                     className="right-inner-chip"
                 >
                     <Typography
@@ -42,11 +51,15 @@ export const Hero = () => {
                 </Box>
             </Stack>
             <Box
-                component={"div"}
+                component={motion.div}
                 className="hero-item"
+                variants={container}
+                initial="hidden"
+                whileInView="show"
             >
                 <Typography
-                    variant="h1"
+                    component={motion.h1}
+                    variants={item}
                     fontFamily={"Inter"}
                     fontWeight={600}
                     fontSize={{ mobile: 32, miniTablet: 40, tablet: 60, laptop: 70, xl: 80 }}
@@ -67,11 +80,15 @@ export const Hero = () => {
                 </Typography>
             </Box>
             <Box
-                component={"div"}
+                component={motion.div}
                 className="hero-item subtitle"
+                variants={container}
+                initial="hidden"
+                whileInView="show"
             >
                 <Typography
-                    variant="subtitle1"
+                    component={motion.p}
+                    variants={item}
                     fontFamily={"Inter"}
                     fontWeight={500}
                     fontSize={{ mobile: 16, miniTablet: 20, tablet: 30, laptop: 40 }}

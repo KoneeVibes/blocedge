@@ -1,24 +1,40 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { NavigationWrapper } from "./styled";
-import { Logo } from "../../asset";
+import logo from "../../asset/logo.png";
 import { useNavigate } from "react-router-dom";
 import { navLinks } from "../../config/static";
 import { BaseButton } from "../button/styled";
 import { HashLink } from 'react-router-hash-link';
 import { MenuButton } from "../button/menu";
+import { useContext, useEffect } from "react";
+import { Context } from "../../context";
 
 export const Navigation = () => {
     const navigate = useNavigate();
+    const { openMenu, setOpenMenu } = useContext(Context);
+
     const handleLogoClick = () => {
+        setOpenMenu(false);
         navigate("/");
     };
+
+    useEffect(() => {
+        if (openMenu) {
+            document.body.style.overflow = "hidden"
+        } else {
+            document.body.style.overflow = "visible"
+        }
+    }, [openMenu]);
+
     return (
         <NavigationWrapper>
             <Box
                 component={"div"}
                 className="favicon-box"
             >
-                <Logo
+                <img
+                    src={logo}
+                    alt="logo"
                     onClick={handleLogoClick}
                 />
             </Box>
@@ -31,6 +47,7 @@ export const Navigation = () => {
                             key={index}
                             to={navLink.url}
                             smooth={true}
+                            onClick={() => setOpenMenu(false)}
                         >
                             <Typography
                                 variant="subtitle1"

@@ -1,13 +1,15 @@
 import { Box, Grid2, Stack, Typography } from "@mui/material";
-import { WhyUsWrapper } from "./styled";
-import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
-import { sellingPoints } from "../../config/static";
+import { TeamWrapper } from "./styled";
+import { TeamIcon } from "../../asset";
+import { teamMembers } from "../../config/static";
 import { motion } from "motion/react";
 import { container, item } from "../../config/verticalSlideIn";
 
-export const WhyUs = () => {
+export const Team = () => {
     return (
-        <WhyUsWrapper>
+        <TeamWrapper
+            id="team"
+        >
             <Stack
                 direction={{ mobile: "row" }}
                 gap={"calc(var(--flex-gap)/4)"}
@@ -23,7 +25,7 @@ export const WhyUs = () => {
                     component={motion.div}
                     variants={item}
                 >
-                    <QuestionMarkIcon style={{ color: "var(--hover-text-color)" }} />
+                    <TeamIcon style={{ color: "var(--hover-text-color)" }} />
                 </Box>
                 <Box
                     overflow={"hidden"}
@@ -39,7 +41,7 @@ export const WhyUs = () => {
                         color={"var(--hover-text-color)"}
                         textAlign={"center"}
                     >
-                        Why Us?
+                        Our Team
                     </Typography>
                 </Box>
             </Stack>
@@ -48,7 +50,7 @@ export const WhyUs = () => {
                 variants={container}
                 initial="hidden"
                 whileInView="show"
-                className="why-us-introductory-text-box"
+                className="team-introductory-text-box"
             >
                 <Typography
                     component={motion.h2}
@@ -70,28 +72,26 @@ export const WhyUs = () => {
                         display: "inline-block"
                     }}
                 >
-                    Let’s Make Your Web3 Dream A Reality
+                    Our team brings decades of experience
                 </Typography>
             </Box>
             <Grid2
                 container
-                spacing={{ mobile: "calc(var(--flex-gap)/2)", tablet: "calc(var(--flex-gap))" }}
+                spacing={{ mobile: "calc(var(--flex-gap)/2)" }}
                 justifyContent={{ mobile: "space-between" }}
                 component={motion.div}
                 variants={container}
                 initial="hidden"
                 whileInView="show"
             >
-                {sellingPoints.map((point, key) => {
+                {teamMembers.map((member, index) => {
                     return (
                         <Grid2
-                            key={key}
-                            size={{ mobile: 12, tablet: 6 }}
+                            key={index}
+                            size={{ mobile: 12, tablet: 6, laptop: 3 }}
                             display={"flex"}
                             flexDirection={"column"}
-                            gap={"calc(var(--flex-gap)/2)"}
-                            position={"relative"}
-                            padding={{ mobile: "calc(var(--basic-padding)/2)", miniTablet: "calc(var(--basic-padding)/1) calc(var(--basic-padding)/2)", laptop: "calc(var(--basic-padding))" }}
+                            overflow={"hidden"}
                             bgcolor={"var(--card-bg-color)"}
                             border={"1px solid var(--border-color)"}
                             sx={{
@@ -103,30 +103,39 @@ export const WhyUs = () => {
                         >
                             <Box
                                 component={"div"}
-                                className="index-box"
+                                className="team-member-thumbnail"
                             >
-                                {point.index}
+                                {member.thumbnail}
                             </Box>
                             <Box
                                 component={"div"}
-                                className="why-us-point-box"
+                                className="team-member-info"
                             >
                                 <Typography
-                                    variant="body1"
+                                    variant="subtitle1"
                                     fontFamily={"Inter"}
-                                    fontWeight={500}
-                                    fontSize={{ mobile: 14, miniTablet: 16, tablet: 20 }}
+                                    fontWeight={600}
+                                    fontSize={{ mobile: 14, miniTablet: 16, xl: 24 }}
                                     lineHeight={"normal"}
-                                    whiteSpace={"normal"}
-                                    color="var(--card-text-color)"
+                                    color={"var(--hover-text-color)"}
                                 >
-                                    {point.description}
+                                    {member.name}
+                                </Typography>
+                                <Typography
+                                    variant="subtitle1"
+                                    fontFamily={"Inter"}
+                                    fontWeight={600}
+                                    fontSize={{ mobile: 14, miniTablet: 16, xl: 24 }}
+                                    lineHeight={"normal"}
+                                    color={"var(--hover-text-color)"}
+                                >
+                                    {member.title}
                                 </Typography>
                             </Box>
                         </Grid2>
                     )
                 })}
             </Grid2>
-        </WhyUsWrapper >
+        </TeamWrapper>
     )
 }

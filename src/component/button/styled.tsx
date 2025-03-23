@@ -1,7 +1,8 @@
 import { Button, ButtonProps, styled } from "@mui/material";
 import { BaseButtonPropsType } from "../../type/component.type";
+import { MotionProps } from "motion/dist/react";
 
-export const BaseButton = styled(Button)<ButtonProps & BaseButtonPropsType>(({ variant, fontsize, fontweight, radius, padding, bgcolor, border, colour, borderImage }) => {
+export const BaseButton = styled(Button)<ButtonProps & BaseButtonPropsType & MotionProps>(({ variant, fontsize, fontweight, radius, padding, bgcolor, border, colour, borderImage }) => {
     return {
         fontFamily: "Inter",
         fontWeight: fontweight || 500,

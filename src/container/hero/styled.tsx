@@ -1,14 +1,15 @@
-import { Stack, styled } from "@mui/material";
+import { Stack, StackProps, styled } from "@mui/material";
 import { useContext } from "react";
 import { Context } from "../../context";
+import { MotionProps } from "motion/dist/react";
 
-export const HeroWrapper = styled(Stack)(({ theme }) => {
+export const HeroWrapper = styled(Stack)<StackProps & MotionProps>(({ theme }) => {
     const { openMenu } = useContext(Context);
     return {
+        visibility: openMenu ? "hidden" : "visible",
         position: "relative",
-        top: openMenu ? "var(--mobile-nav-height)" : "0",
         alignItems: "center",
-        padding: openMenu ? "0 calc(var(--basic-padding) / 2)" : "calc(var(--basic-padding) * 2) calc(var(--basic-padding) / 2) calc(var(--basic-padding) * 3.5)",
+        padding: "calc(var(--basic-padding)) calc(var(--basic-padding) / 2) calc(var(--basic-padding) * 3)",
         "& .hero-item": {
             display: "flex",
             justifyContent: "center",
@@ -35,19 +36,19 @@ export const HeroWrapper = styled(Stack)(({ theme }) => {
             },
         },
         [theme.breakpoints.up("miniTablet")]: {
-            padding: openMenu ? "0 var(--basic-padding)" : "var(--basic-padding) var(--basic-padding) calc(var(--basic-padding) * 4.5)",
+            padding: "var(--basic-padding) var(--basic-padding) calc(var(--basic-padding) * 4.5)",
             "& .hero-item": {
                 width: "85%",
             },
         },
         [theme.breakpoints.up("tablet")]: {
-            padding: openMenu ? "0 var(--basic-padding) calc(var(--basic-padding) * 5)" : "var(--basic-padding) var(--basic-padding) calc(var(--basic-padding) * 5)",
+            padding: "var(--basic-padding) var(--basic-padding) calc(var(--basic-padding) * 5)",
             "& .hero-item": {
                 width: "70%",
             },
         },
         [theme.breakpoints.up("laptop")]: {
-            padding: openMenu ? "0 var(--basic-padding) calc(var(--basic-padding) * 5.5)" : "var(--basic-padding) var(--basic-padding) calc(var(--basic-padding) * 5.5)",
+            padding: "var(--basic-padding) var(--basic-padding) calc(var(--basic-padding) * 5.5)",
             "& .hero-item": {
                 width: "60%",
             }

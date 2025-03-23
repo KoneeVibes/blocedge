@@ -1,13 +1,10 @@
-import { Box, styled } from "@mui/material";
-import { useContext } from "react";
-import { Context } from "../../context";
+import { Box, BoxProps, styled } from "@mui/material";
+import { MotionProps } from "motion/dist/react";
 
-export const AboutWrapper = styled(Box)(({ theme }) => {
-    const { openMenu } = useContext(Context);
+export const AboutWrapper = styled(Box)<BoxProps & MotionProps>(({ theme }) => {
     return {
-        position: "relative",
-        top: openMenu ? "var(--mobile-nav-height)" : "0",
         padding: "calc(var(--basic-padding)/2)",
+        transform: "translateY(-10%)",
         "& .about-introductory-text-box": {
             display: "flex",
             justifyContent: "center",
@@ -28,6 +25,7 @@ export const AboutWrapper = styled(Box)(({ theme }) => {
         [theme.breakpoints.up("miniTablet")]: {
             marginTop: "-5rem",
             padding: "0 calc(var(--basic-padding)/2) calc(var(--basic-padding))",
+            transform: "unset",
         },
         [theme.breakpoints.up("tablet")]: {
             marginTop: "-5rem",

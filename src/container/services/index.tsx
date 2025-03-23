@@ -1,13 +1,15 @@
 import { Box, Grid2, Stack, Typography } from "@mui/material";
-import { WhyUsWrapper } from "./styled";
-import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
-import { sellingPoints } from "../../config/static";
+import { ServicesWrapper } from "./styled";
+import { ServiceIcon } from "../../asset";
+import { serviceOfferings } from "../../config/static";
 import { motion } from "motion/react";
 import { container, item } from "../../config/verticalSlideIn";
 
-export const WhyUs = () => {
+export const Services = () => {
     return (
-        <WhyUsWrapper>
+        <ServicesWrapper
+            id="services"
+        >
             <Stack
                 direction={{ mobile: "row" }}
                 gap={"calc(var(--flex-gap)/4)"}
@@ -23,7 +25,7 @@ export const WhyUs = () => {
                     component={motion.div}
                     variants={item}
                 >
-                    <QuestionMarkIcon style={{ color: "var(--hover-text-color)" }} />
+                    <ServiceIcon style={{ color: "var(--hover-text-color)" }} />
                 </Box>
                 <Box
                     overflow={"hidden"}
@@ -39,7 +41,7 @@ export const WhyUs = () => {
                         color={"var(--hover-text-color)"}
                         textAlign={"center"}
                     >
-                        Why Us?
+                        Our Services
                     </Typography>
                 </Box>
             </Stack>
@@ -48,7 +50,7 @@ export const WhyUs = () => {
                 variants={container}
                 initial="hidden"
                 whileInView="show"
-                className="why-us-introductory-text-box"
+                className="services-introductory-text-box"
             >
                 <Typography
                     component={motion.h2}
@@ -70,7 +72,7 @@ export const WhyUs = () => {
                         display: "inline-block"
                     }}
                 >
-                    Let’s Make Your Web3 Dream A Reality
+                    We inspire development and drive growth
                 </Typography>
             </Box>
             <Grid2
@@ -82,15 +84,15 @@ export const WhyUs = () => {
                 initial="hidden"
                 whileInView="show"
             >
-                {sellingPoints.map((point, key) => {
+                {serviceOfferings.map((service, index) => {
                     return (
                         <Grid2
-                            key={key}
-                            size={{ mobile: 12, tablet: 6 }}
+                            key={index}
+                            size={{ mobile: 12, tablet: 6, xl: 4 }}
                             display={"flex"}
                             flexDirection={"column"}
                             gap={"calc(var(--flex-gap)/2)"}
-                            position={"relative"}
+                            overflow={"hidden"}
                             padding={{ mobile: "calc(var(--basic-padding)/2)", miniTablet: "calc(var(--basic-padding)/1) calc(var(--basic-padding)/2)", laptop: "calc(var(--basic-padding))" }}
                             bgcolor={"var(--card-bg-color)"}
                             border={"1px solid var(--border-color)"}
@@ -102,31 +104,51 @@ export const WhyUs = () => {
                             variants={item}
                         >
                             <Box
-                                component={"div"}
-                                className="index-box"
+                                overflow={"hidden"}
                             >
-                                {point.index}
+                                {service.icon}
                             </Box>
                             <Box
-                                component={"div"}
-                                className="why-us-point-box"
+                                overflow={"hidden"}
+                            >
+                                <Typography
+                                    variant="h3"
+                                    fontFamily={"Inter"}
+                                    fontWeight={700}
+                                    fontSize={{ mobile: 20, tablet: 25, desktop: 28 }}
+                                    lineHeight={"normal"}
+                                    whiteSpace={"normal"}
+                                    sx={{
+                                        background: "linear-gradient(180deg, #FFFFFF 0%, #FFFFFFB2 100%)",
+                                        WebkitBackgroundClip: "text",
+                                        WebkitTextFillColor: "transparent",
+                                        backgroundClip: "text",
+                                        color: "transparent",
+                                        display: "inline-block"
+                                    }}
+                                >
+                                    {service.title}
+                                </Typography>
+                            </Box>
+                            <Box
+                                overflow={"hidden"}
                             >
                                 <Typography
                                     variant="body1"
                                     fontFamily={"Inter"}
-                                    fontWeight={500}
+                                    fontWeight={400}
                                     fontSize={{ mobile: 14, miniTablet: 16, tablet: 20 }}
                                     lineHeight={"normal"}
                                     whiteSpace={"normal"}
-                                    color="var(--card-text-color)"
+                                    color="var(--active-text-color)"
                                 >
-                                    {point.description}
+                                    {service.body}
                                 </Typography>
                             </Box>
                         </Grid2>
                     )
                 })}
             </Grid2>
-        </WhyUsWrapper >
+        </ServicesWrapper>
     )
 }

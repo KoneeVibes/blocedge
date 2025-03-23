@@ -1,2 +1,24 @@
 export { ReactComponent as Logo } from "./logo.svg";
-export {ReactComponent as AboutImg} from "./about.svg";
+export { ReactComponent as LogoII } from "./logoII.svg";
+export { ReactComponent as AboutImg } from "./about.svg";
+export { ReactComponent as IndexI } from "./cardone.svg";
+export { ReactComponent as IndexII } from "./cardtwo.svg";
+export { ReactComponent as IndexIII } from "./cardthree.svg";
+export { ReactComponent as IndexIV } from "./cardfour.svg";
+export { ReactComponent as ServiceIcon } from "./serviceicon.svg";
+export { ReactComponent as CommunityBuildingIcon } from "./communitybuilding.svg";
+export { ReactComponent as DesignandDevelopmentIcon } from "./designanddevelopment.svg"
+export { ReactComponent as CollabandPartnershipIcon } from "./collabandpartnerships.svg";
+export { ReactComponent as MarketingAndStrategyIcon } from "./marketingandstrategy.svg";
+export { ReactComponent as ContentAndCreativeBlocIcon } from "./contentandcreativebloc.svg";
+export { ReactComponent as SettingTheStageIcon } from "./settingthestage.svg";
+export { ReactComponent as TeamIcon } from "./teamicon.svg";
+export { ReactComponent as Akiba } from "./akiba.svg";
+export { ReactComponent as Dapper } from "./dapper.svg";
+export { ReactComponent as Joe } from "./joe.svg";
+export { ReactComponent as Treetrunk } from "./treetrunk.svg";
+export { ReactComponent as ArrowForward } from "./arrowforward.svg";
+export { ReactComponent as TwitterIcon } from "./twittericon.svg";
+export { ReactComponent as InstagramIcon } from "./instagramicon.svg";
+export { ReactComponent as TelegramIcon } from "./telegramicon.svg";
+export { ReactComponent as FacebookIcon } from "./facebookicon.svg";

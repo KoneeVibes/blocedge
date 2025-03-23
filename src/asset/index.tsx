@@ -1,5 +1,3 @@
-export { ReactComponent as Logo } from "./logo.svg";
-export { ReactComponent as LogoII } from "./logoII.svg";
 export { ReactComponent as AboutImg } from "./about.svg";
 export { ReactComponent as IndexI } from "./cardone.svg";
 export { ReactComponent as IndexII } from "./cardtwo.svg";

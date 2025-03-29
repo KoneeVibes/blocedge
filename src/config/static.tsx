@@ -1,4 +1,8 @@
-import { Akiba, CollabandPartnershipIcon, CommunityBuildingIcon, ContentAndCreativeBlocIcon, Dapper, DesignandDevelopmentIcon, FacebookIcon, IndexI, IndexII, IndexIII, IndexIV, InstagramIcon, Joe, MarketingAndStrategyIcon, SettingTheStageIcon, TelegramIcon, Treetrunk, TwitterIcon } from "../asset";
+import { CollabandPartnershipIcon, CommunityBuildingIcon, ContentAndCreativeBlocIcon, DesignandDevelopmentIcon, FacebookIcon, IndexI, IndexII, IndexIII, IndexIV, InstagramIcon,  MarketingAndStrategyIcon, SettingTheStageIcon, TelegramIcon, TwitterIcon } from "../asset";
+import frankNew from "../asset/Frank_IMG_5890.JPG";
+import treetrunkNew from "../asset/TreeTrunk_IMG_5891.JPG";
+import joeNew from "../asset/Joe_IMG_5892.JPG";
+import dapperNew from "../asset/Dapper_IMG_5893.JPG";
 
 export const navLinks = [
     {
@@ -80,22 +84,22 @@ export const serviceOfferings = [
 
 export const teamMembers = [
     {
-        thumbnail: <Akiba />,
+        thumbnail: frankNew,
         name: "Frank",
         title: "CEO"
     },
     {
-        thumbnail: <Dapper />,
+        thumbnail: dapperNew,
         name: "Dapper",
         title: "CTO"
     },
     {
-        thumbnail: <Joe />,
+        thumbnail: joeNew,
         name: "Joey",
         title: "COO"
     },
     {
-        thumbnail: <Treetrunk />,
+        thumbnail: treetrunkNew,
         name: "Treetrunk",
         title: "CMO"
     },

@@ -11,10 +11,6 @@ export { ReactComponent as MarketingAndStrategyIcon } from "./marketingandstrate
 export { ReactComponent as ContentAndCreativeBlocIcon } from "./contentandcreativebloc.svg";
 export { ReactComponent as SettingTheStageIcon } from "./settingthestage.svg";
 export { ReactComponent as TeamIcon } from "./teamicon.svg";
-export { ReactComponent as Akiba } from "./akiba.svg";
-export { ReactComponent as Dapper } from "./dapper.svg";
-export { ReactComponent as Joe } from "./joe.svg";
-export { ReactComponent as Treetrunk } from "./treetrunk.svg";
 export { ReactComponent as ArrowForward } from "./arrowforward.svg";
 export { ReactComponent as TwitterIcon } from "./twittericon.svg";
 export { ReactComponent as InstagramIcon } from "./instagramicon.svg";

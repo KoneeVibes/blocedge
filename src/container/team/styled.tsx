@@ -15,9 +15,10 @@ export const TeamWrapper = styled(Box)<BoxProps & MotionProps>(({ theme }) => {
             padding: "calc(var(--basic-padding)/2)",
         },
         "& .team-member-thumbnail": {
-            "& svg": {
+            "& img": {
                 width: "100%",
-                height: "auto"
+                height: "auto",
+                minHeight: "418px"
             }
         },
         [theme.breakpoints.up("miniTablet")]: {

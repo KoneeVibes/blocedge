@@ -105,7 +105,7 @@ export const Team = () => {
                                 component={"div"}
                                 className="team-member-thumbnail"
                             >
-                                {member.thumbnail}
+                                <img src={member.thumbnail} alt="team-member-photo" />
                             </Box>
                             <Box
                                 component={"div"}

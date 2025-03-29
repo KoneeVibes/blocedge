@@ -1,8 +1,8 @@
 import { CollabandPartnershipIcon, CommunityBuildingIcon, ContentAndCreativeBlocIcon, DesignandDevelopmentIcon, FacebookIcon, IndexI, IndexII, IndexIII, IndexIV, InstagramIcon,  MarketingAndStrategyIcon, SettingTheStageIcon, TelegramIcon, TwitterIcon } from "../asset";
-import frankNew from "../asset/Frank_IMG_5890.JPG";
-import treetrunkNew from "../asset/TreeTrunk_IMG_5891.JPG";
-import joeNew from "../asset/Joe_IMG_5892.JPG";
-import dapperNew from "../asset/Dapper_IMG_5893.JPG";
+import frankNew from "../asset/frank.jpg";
+import treetrunkNew from "../asset/treetrunk.jpg";
+import joeNew from "../asset/joe.jpg";
+import dapperNew from "../asset/dapper.jpg";
 
 export const navLinks = [
     {

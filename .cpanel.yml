@@ -1,5 +1,5 @@
 ---
 deployment:
  tasks:
- - export DEPLOYPATH=/home2/blocedge/public_html/
- - /bin/cp -R /home2/blocedge/repositories/blocedge.com/build/* $DEPLOYPATH
+ - export DEPLOYPATH=/home/blocedg1/public_html/
+ - /bin/cp -R /home/blocedg1/repositories/blocedge.com/build/* $DEPLOYPATH

@@ -13,6 +13,5 @@ export { ReactComponent as SettingTheStageIcon } from "./settingthestage.svg";
 export { ReactComponent as TeamIcon } from "./teamicon.svg";
 export { ReactComponent as ArrowForward } from "./arrowforward.svg";
 export { ReactComponent as TwitterIcon } from "./twittericon.svg";
-export { ReactComponent as InstagramIcon } from "./instagramicon.svg";
 export { ReactComponent as TelegramIcon } from "./telegramicon.svg";
-export { ReactComponent as FacebookIcon } from "./facebookicon.svg";
+export { ReactComponent as MediumIcon } from "./mediumicon.svg";

@@ -1,8 +1,9 @@
-import { CollabandPartnershipIcon, CommunityBuildingIcon, ContentAndCreativeBlocIcon, DesignandDevelopmentIcon, FacebookIcon, IndexI, IndexII, IndexIII, IndexIV, InstagramIcon,  MarketingAndStrategyIcon, SettingTheStageIcon, TelegramIcon, TwitterIcon } from "../asset";
+import { CollabandPartnershipIcon, CommunityBuildingIcon, ContentAndCreativeBlocIcon, DesignandDevelopmentIcon, IndexI, IndexII, IndexIII, IndexIV, MediumIcon, MarketingAndStrategyIcon, SettingTheStageIcon, TwitterIcon } from "../asset";
 import frankNew from "../asset/frank.jpg";
 import treetrunkNew from "../asset/treetrunk.jpg";
 import joeNew from "../asset/joe.jpg";
 import dapperNew from "../asset/dapper.jpg";
+import { LinkedIn } from "@mui/icons-material";
 
 export const navLinks = [
     {
@@ -132,21 +133,21 @@ export const socialMedia = [
     {
         icon: <TwitterIcon />,
         name: "Twitter",
-        url: "#"
+        url: "https://x.com/Bloc_Edge"
     },
     {
-        icon: <InstagramIcon />,
-        name: "Instagram",
-        url: "#"
+        icon: <MediumIcon />,
+        name: "Medium",
+        url: "https://medium.com/@blocedgeorg/"
     },
+    // {
+    //     icon: <TelegramIcon />,
+    //     name: "Telegram",
+    //     url: "#"
+    // },
     {
-        icon: <TelegramIcon />,
-        name: "Telegram",
-        url: "#"
+        icon: <LinkedIn sx={{ color: "white", borderRadius: "50%" }} />,
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/company/bloc-edge/"
     },
-    {
-        icon: <FacebookIcon />,
-        name: "Facebook",
-        url: "#"
-    },
-]
+];

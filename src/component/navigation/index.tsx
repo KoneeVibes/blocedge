@@ -18,6 +18,11 @@ export const Navigation = () => {
         navigate("/");
     };
 
+    const handleContactUsClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        e.stopPropagation();
+        return window.location.href = "mailto:info@blocedge.com";
+    }
+
     useEffect(() => {
         if (openMenu) {
             document.body.style.overflow = "hidden"
@@ -74,7 +79,9 @@ export const Navigation = () => {
                 component={"div"}
                 className="contact-button"
             >
-                <BaseButton>
+                <BaseButton
+                    onClick={handleContactUsClick}
+                >
                     <Typography
                         variant={"button"}
                         fontFamily={"inherit"}

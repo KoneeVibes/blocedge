@@ -70,7 +70,7 @@ export const About = () => {
                         display: "inline-block"
                     }}
                 >
-                    Welcome to Blocedge
+                    Welcome to BlocEdge
                 </Typography>
             </Box>
             <Stack
